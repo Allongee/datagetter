@@ -1,0 +1,26 @@
+{ "name": "datagetter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Allongee/datagetter.git"
+  },
+  "version": "0.1.0",
+  "description": "Gets Zeta markets data",
+  "main": "dist/getData.js",
+  "types": "dist/getData.d.ts",
+  "dependencies": {
+    "@project-serum/anchor": "0.18.2",
+    "@solana/web3.js": "^1.31.0",
+    "buffer-layout": "^1.2.2",
+    "dotenv": "^10.0.0",
+    "ts-node": "^7.0.1",
+    "privatesdkchangezeta": "0.1.4",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "start": "ts-node getData.ts",
+    "build-ts": "tsc"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
