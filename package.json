@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "ts-node getData.ts",
-    "build-ts": "tsc"
+    "build": "tsc"
   },
   "engines": {
     "node": "16.x"

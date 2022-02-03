@@ -1,13 +1,15 @@
-from node:16-slim
-# version arg contains current git tag
-ARG VERSION_ARG
-# install git
-RUN apt-get update && apt-get install -y git
+# Specify a base image
+from node:16.13.2-slim
 
-# install node package
+# install dependencies
+WORKDIR /usr/app
+COPY package.json ./
+COPY tsconfig*.json ./
+COPY . /usr/app
 RUN npm install
 
 # Builds the package
-RUN tsc
+RUN npm run build
+
 # run getData
 RUN node dist/getData.js
